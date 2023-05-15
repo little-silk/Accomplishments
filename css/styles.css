@@ -4,11 +4,11 @@
 /* My Styles */
 
 :root {
-    --primary: #C0DCDC;
-    --secondary: #f1f1f1;
-    --secondary-2: #3C5472;
-    --tertiary: #8A97A8;
-    --tertiary-2: #E9C7D5;
+    --primary: #F68E92;
+    --secondary: #ffffff;
+    --secondary-2: #ffffff;
+    --tertiary: #ffffff;
+    --tertiary-2: #151e70;
 }
 
 body {
@@ -39,6 +39,7 @@ body {
       display: flex;
       flex-direction: row;
     animation: 1s ease-out 0s 1 slideInFromLeft;
+    color: var(--tertiary-2);
   }
 
   @keyframes slideInFromLeft {
@@ -70,7 +71,6 @@ body {
     transform-origin: 100% 50%;
     animation: revealRight 1s cubic-bezier(0.23, 1, 0.75, 1) backwards;
     border-radius: 10px;
-    box-shadow: 10px 5px 5px var(--tertiary);
   }
   
   @keyframes revealRight {
@@ -147,10 +147,15 @@ body {
     animation-delay: .7s;
   }
 
+  a {
+    color: var(--secondary);
+  }
+
   .extra {
     display: flex;
     flex-direction: row;
     margin-top: 50px;
+    padding-bottom: 50px;
 }
 
 ul {
