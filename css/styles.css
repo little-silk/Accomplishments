@@ -1,0 +1,168 @@
+@import url('britney.css');
+@import url('satoshi.css');
+
+/* My Styles */
+
+:root {
+    --primary: #C0DCDC;
+    --secondary: #f1f1f1;
+    --secondary-2: #3C5472;
+    --tertiary: #8A97A8;
+    --tertiary-2: #E9C7D5;
+}
+
+body {
+    font-family: 'Britney-Regular';
+    width: 100%;
+    background-color: var(--primary);
+    z-index: -1;
+    justify-content: center;
+    align-content: center;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--secondary-2);
+}
+
+  header {
+      display: flex;
+      height: 45vh;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  h1 {
+      position: absolute;
+      font-size: 5em;
+      z-index: 3;
+      display: flex;
+      flex-direction: row;
+    animation: 1s ease-out 0s 1 slideInFromLeft;
+  }
+
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .banner {  
+    width: 80%;
+    height: 80%;
+    display: block;
+    left: 50px;
+      position: relative;
+      border-radius: 10px;
+  }
+
+  .banner::before {
+    position: absolute;
+    content: "";
+    top: 25px;
+    left: 50px;
+    width: 80%;
+    height: 80%;
+    background-color: var(--secondary);
+    transform-origin: 100% 50%;
+    animation: revealRight 1s cubic-bezier(0.23, 1, 0.75, 1) backwards;
+    border-radius: 10px;
+    box-shadow: 10px 5px 5px var(--tertiary);
+  }
+  
+  @keyframes revealRight {
+    0% {
+      transform: scaleX(0);
+    }
+    100% {
+      transform: scaleX(1);
+    }
+  }
+
+  main {
+    display: flex;
+    flex-direction: row;
+    margin-left: 50px;
+    margin-right: 50px;
+    gap: 50px;
+  }
+
+  table {
+      font-family: 'Satoshi-Regular';
+      font-size: 1.5em;
+      background-color: var(--tertiary-2);
+      border-radius: 10px;
+      padding: 30px;
+      line-height: 31px;
+      opacity: 0;
+      box-shadow: 10px 5px 5px var(--tertiary);
+      animation: 1s ease-out 0s 1 animate__fadeInUpBig;
+      animation-delay: 2s;
+      animation-fill-mode: forwards;
+      width: 50%;
+      margin-left: 5%;
+      margin-right: 5%;
+  }
+
+  p {
+    font-family: 'Satoshi-Regular';
+    font-size: 1.5em;
+    text-align: left;
+    margin: auto;
+    background-color: var(--tertiary-2);
+    border-radius: 10px;
+    padding: 30px;
+    line-height: 31px;
+    opacity: 0;
+    box-shadow: 10px 5px 5px var(--tertiary);
+    animation: 1s ease-out 0s 1 animate__fadeInUpBig;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+
+  @keyframes animate__fadeInUpBig {
+    from {
+        transform: translate3d(0,40px,0);
+        opacity: 0
+    }
+
+    to {
+        transform: translate3d(0,0,0);
+        opacity: 1
+    }
+}
+
+  img {
+    border-radius: 10px;
+    width: 40%;
+    height: 50%;
+    object-fit: cover;
+    box-shadow: 10px 5px 5px var(--tertiary);
+    animation: 1s ease-out 0s 1 animate__fadeInUpBig;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    animation-delay: .7s;
+  }
+
+  .extra {
+    display: flex;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+ul {
+  background-color: var(--tertiary-2);
+  font-family: 'Satoshi-Regular';
+  font-size: 1.5em;
+  border-radius: 10px;
+  padding: 30px;
+  line-height: 31px;
+  opacity: 0;
+  box-shadow: 10px 5px 5px var(--tertiary);
+  animation: 1s ease-out 0s 1 animate__fadeInUpBig;
+  animation-delay: 2.5s;
+  animation-fill-mode: forwards;
+}
